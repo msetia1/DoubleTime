@@ -1,12 +1,15 @@
 # Goal + Tech Stack + Core Logic
 
+Product behavior and rules. System structure: architecture.md. Event sequences: data_flow.md.
+
 Screen time blocker where users can gamble their remaining screentime for the day through various games.
 
 Crash, Plinko, Mines, Slots
 
 ## Tech Stack
 
-This project is built using **Apple-native technologies first**, optimized for AI-assisted development, strong official documentation, and low implementation friction.  
+This project is built using **Apple-native technologies first**, optimized for AI-assisted development, strong official documentation, and low implementation friction.
+
 External dependencies are avoided unless they are widely adopted and exceptionally well documented.
 
 ## Platform
@@ -33,9 +36,9 @@ External dependencies are avoided unless they are widely adopted and exceptional
 ## Screen Time & Blocking
 
 - **FamilyControls**
-  - Request authorization and allow users to select apps/categories to manage
+  - Request authorization and allow users to select apps to manage
 - **ManagedSettings**
-  - Apply and remove app/category shields when bankroll reaches 0 minutes
+  - Apply and remove app shields for the selected apps when bankroll reaches 0 minutes
 - **DeviceActivity**
   - Handle daily reset boundaries and usage monitoring
   - Source of truth for day transitions (not for real-time countdown UI)
@@ -43,10 +46,8 @@ External dependencies are avoided unless they are widely adopted and exceptional
 ## Data Persistence
 
 - **UserDefaults + Codable** (default choice)
-  - Store:
-    - remaining minutes
-    - daily allowance
-    - game history (lightweight)
+  - Store user settings and lightweight history (for example, daily allowance and game history)
+  - Internal bookkeeping is persisted only as needed to recompute `remainingMinutes`
   - Chosen for simplicity, reliability, and AI-friendliness
 - **SwiftData** (optional, future upgrade)
   - Only introduced if structured queries or analytics become necessary
@@ -88,51 +89,71 @@ External dependencies are avoided unless they are widely adopted and exceptional
 
 ### What is being gambled
 
-The user’s **total screen time budget** (daily allowance). That budget is spent on **unblocking the apps the user has chosen to restrict** (e.g. social media). Not per-app limits; one pool for all selected apps.
+The user is wagering their **daily screen time budget** (a single pool of minutes). That pool is used to determine whether the user can unlock usage for the restricted apps they selected (e.g. social media). This is not a per-app limit; it is one shared budget across all selected apps.
 
-### Daily allowance
+### App selection (apps only)
 
-**Fixed user-set amount per day** (e.g. 90 min/day). Not “whatever Screen Time says is left” from a system budget.
+Users select **apps only** via `FamilyControls`. Categories are out of scope.
 
-### App selection
+### Remaining time model (single user-facing value)
 
-**Apps only** (FamilyControls picker). No categories.
+The app exposes one primary user-facing value: **`remainingMinutes`**.
 
-### Blocking model
+- **Definition (computed):**
+  - `remainingMinutes = (dailyAllowanceMinutes + bonusMinutesFromGames) - floor(usageMinutesToday)`
+- **`dailyAllowanceMinutes`**: fixed per day (user-set).
+- **`usageMinutesToday`**: measured by `DeviceActivity` for **only the selected apps**.
+- **`bonusMinutesFromGames`**: an internal adjustment ledger (can be positive or negative).
+- **Units and rounding:** all values are whole minutes only; **floor rounding only**, and `remainingMinutes` is clamped to a minimum of 0 before being shown to the user.
 
-When bankroll hits 0 minutes: block **only the selected apps** (not “phone is useless except essentials”).
+The UI must display **`remainingMinutes`** as the primary number. Allowance, bonus, and usage breakdowns can be viewable, but they are secondary and not the focus.
 
-### Unblocking and pause
+### Bonus minutes storage (internal ledger)
 
-- When the user wins minutes back, they may **tap a button in the app** to turn off blocking for their selected apps; then their time starts counting down again.
-- **Manual pause:** In-app control (e.g. “Pause timer”) to **pause the bankroll countdown** without unblocking. When paused, stop deducting; when resumed, deduction continues. Blocking on/off is separate (Managed Settings).
+`bonusMinutesFromGames` is stored separately for accounting and correctness.
 
-### Usage and time left
+- Bonus minutes are **added/subtracted when games resolve**, regardless of lock state.
+- If the user wins minutes while locked, those minutes are added to `bonusMinutesFromGames`, but the restricted apps **remain locked** until the user explicitly unlocks.
 
-- **Source of truth:** Real usage measured by **DeviceActivity** (not an in-app countdown).
-- **UI:** Show **how much time the user has left** (remaining budget). No live countdown timer in the app.
+### Locking policy (best-effort)
 
-### Edge case—mid-session
+Blocking applies **only to the selected apps**.
 
-If the user is in a blocked app and bankroll hits 0: **kick them out instantly**.
+- **Locked:** shields are applied via `ManagedSettings`; usage of selected apps is prevented.
+- **Unlocked:** shields are removed; usage is permitted as long as policy allows it.
 
-### Rounding
+The app does not and cannot pause `DeviceActivity` measurement. Usage is always measured honestly by `DeviceActivity`; there is **no in-app countdown timer**.
 
-**Floor only.** All minute deltas round down. No minimum +1 min rule.
+When `remainingMinutes` reaches 0 (or below), the app should apply shields **immediately (best-effort)** and attempt to eject the user from a selected app if it is currently in use.
 
-### Wager UI
+### UX and controls
 
-**Show win/loss in real time** as the user changes wager variables (bet, multiplier, options). Display potential “+X min” / “−Y min” before they commit.
+The app has one primary control: **Restricted Apps (Locked / Unlocked)**.
 
-### Mid-game kill
+- Only one primary number is shown: **`remainingMinutes`**.
+- **Unlock rule:** unlocking is allowed only when `remainingMinutes > 0`.
+- **When `remainingMinutes == 0`:**
+  - the control appears visually disabled/greyed out,
+  - tapping triggers a subtle shake animation,
+  - an inline message appears below the control: “0 minutes remaining” (fades in/out),
+  - the app remains locked.
+- When `remainingMinutes` becomes `> 0` again, the control becomes unlockable, but it **stays locked** until the user toggles it.
 
-If the app is killed or restarted **mid-game**: current wager is **forfeit**.
+### Game resolution and rounding
+
+All game outcomes resolve to whole-minute deltas and apply **floor rounding only**. There is no minimum “+1 minute” house rule.
+
+If the app is killed or restarted **mid-game**, the current wager is **forfeit**.
+
+### Wager UI (real-time feedback)
+
+As the user changes wager variables (bet amount, multiplier, game options), the UI must show the predicted outcome **in real time** (e.g. “+X min” / “−Y min”) before the user commits the wager.
 
 ### Anti-tilt, clock tampering, compliance
 
-- **Anti-tilt:** No max wager per play, no max plays per day.
-- **Clock tampering:** Out of scope.
-- **Compliance:** Might ship for real—use clear wording and guardrails (e.g. “you are wagering screen time,” no misleading odds, age/region as needed).
+- **Anti-tilt:** no max wager per play and no max plays per day.
+- **Clock tampering:** out of scope.
+- **Compliance:** might ship for real—use clear wording and guardrails (e.g. “you are wagering screen time,” avoid misleading odds, consider age/region requirements as needed).
 
 ## Helpful Documentation
 
@@ -145,7 +166,7 @@ Use ~/docs/llms folder for formatted documentation regarding SwiftUI. See the li
 ### Screentime API Docs
 
 [Family Controls](https://developer.apple.com/documentation/FamilyControls)
-[Manged Settings](https://developer.apple.com/documentation/ManagedSettings)
+[Managed Settings](https://developer.apple.com/documentation/ManagedSettings)
 [Device Activity](https://developer.apple.com/documentation/DeviceActivity)
 
 ### Animation Docs

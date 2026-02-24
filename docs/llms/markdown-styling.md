@@ -6,6 +6,7 @@ These rules MUST be followed exactly.
 
 - Always include a space after # symbols
 - Always include a blank line before and after a heading
+- Only one `#` (H1) per file; use `##` and deeper for all other section headings
 
 ## Section
 
@@ -38,3 +39,4 @@ Text immediately follows
 - No trailing spaces
 - No mixed list markers
 - No inline headings
+- No bare URLs (`https://…`); always use Markdown links like `[label](https://example.com)`

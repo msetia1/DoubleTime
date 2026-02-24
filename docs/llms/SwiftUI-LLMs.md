@@ -8,11 +8,9 @@ Availability strings filtered: Yes
 Code blocks only: No
 -->
 
-# https://developer.apple.com/documentation/SwiftUI
-
-Framework
-
 # SwiftUI
+
+[SwiftUI documentation](https://developer.apple.com/documentation/SwiftUI)
 
 Declare the user interface and behavior for your app on every platform.
 
@@ -1425,7 +1423,7 @@ Extend your app’s basic functionality to other parts of the system, like by ad
 
 ---
 
-# https://developer.apple.com/documentation/swiftui/windows
+# [https://developer.apple.com/documentation/swiftui/windows](https://developer.apple.com/documentation/swiftui/windows)
 
 Collection
 
@@ -1434,7 +1432,7 @@ Collection
 
 API Collection
 
-# Windows
+## Windows
 
 Display user interface content in a window or a collection of windows.
 
