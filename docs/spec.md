@@ -24,6 +24,8 @@ External dependencies are avoided unless they are widely adopted and exceptional
   - Primary UI framework
   - Declarative, predictable, and well supported by Apple documentation
   - Preferred over UIKit for all screens and animations
+  - Visual, typography, motion, copy, and accessibility standards must follow `Docs/styling.md`
+  - Typography must use shared tokens from `Core/Design/Typography.swift` (no ad-hoc fonts)
 
 ## State & Concurrency
 
@@ -130,6 +132,8 @@ When `remainingMinutes` reaches 0 (or below), the app should apply shields **imm
 
 The app has one primary control: **Restricted Apps (Locked / Unlocked)**.
 
+The control’s visual states, motion behavior, and copy must follow `Docs/styling.md`.
+
 - Only one primary number is shown: **`remainingMinutes`**.
 - **Unlock rule:** unlocking is allowed only when `remainingMinutes > 0`.
 - **When `remainingMinutes == 0`:**
@@ -157,7 +161,7 @@ As the user changes wager variables (bet amount, multiplier, game options), the 
 
 ## Helpful Documentation
 
-Use ~/docs/llms folder for formatted documentation regarding SwiftUI. See the links below for specific information regarding family controls, managed settings device activity, and animating views.
+Use ~/Docs/llms folder for formatted documentation regarding SwiftUI. See the links below for specific information regarding family controls, managed settings device activity, and animating views.
 
 ### UI Docs
 

@@ -25,6 +25,17 @@ Policy derived values:
 
 ---
 
+## UI Feedback and Copy Contract
+
+All user-visible feedback emitted by these flows must match `Docs/styling.md`:
+
+- Lock control states and blocked-unlock feedback animation behavior.
+- Exact inline copy string: “0 minutes remaining”.
+- Outcome strings format: “+X min” / “−Y min”.
+- Accessibility labels for remaining minutes, lock state, and outcomes.
+
+---
+
 ## Global Rule: Who Can Touch What
 
 Views and Feature ViewModels may:

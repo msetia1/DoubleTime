@@ -16,32 +16,58 @@ Core invariants:
 
 The app is organized into four layers:
 
-- App Shell  
+- App Shell
   Root composition, dependency wiring, environment injection, and routing.
 
-- Features (UI)  
-  SwiftUI Views and lightweight Feature ViewModels.  
+- Features (UI)
+  SwiftUI Views and lightweight Feature ViewModels.
   No Feature imports or directly interacts with Screen Time frameworks.
 
-- Domain  
-  Pure business logic, models, and game engines.  
+- Domain
+  Pure business logic, models, and game engines.
   No Apple Screen Time imports.
 
-- Services  
+- Services
   Platform integrations (FamilyControls, ManagedSettings, DeviceActivity), persistence, feedback, and logging.
 
 Rule: Services are the only layer allowed to import Screen Time frameworks.
 
 ---
 
+## UI Styling Boundary
+
+Styling rules are defined in `Docs/styling.md`. Architecture responsibility is to enforce where those rules are applied:
+
+- Feature Views and Components must consume shared styling primitives/tokens.
+- Typography must come from `Core/Design/Typography.swift` (single source of truth for font tokens).
+- Do not hardcode per-screen palettes, fonts, spacing scales, or copy variants that conflict with `Docs/styling.md`.
+- Components must conform to the shared styling contract from `Docs/styling.md`:
+  - RemainingMinutesHero
+  - BrandLockButton
+  - CardContainer
+  - WagerChips
+  - InlineStatusMessage
+
+Style source-of-truth mapping:
+
+- Visual rules and copy standards: `Docs/styling.md`
+- Font tokens and Dynamic Type behavior: `Core/Design/Typography.swift`
+- Image and color assets: `Resources/Assets.xcassets`
+- Audio cues: `Resources/Sounds/`
+- Bundled fonts used by `Core/Design/Typography.swift`: `Resources/Fonts/`
+
+---
+
 ## Folder Structure
 
 App/
-ScreenTimeCasinoApp.swift
+ScreenTimeWagerApp.swift
 AppRootView.swift
 AppRouter.swift
 
 Core/
+Design/
+Typography.swift
 Domain/
 Models/
 GameType.swift
@@ -97,6 +123,10 @@ Components/
 RemainingMinutesCard.swift
 LockToggleButton.swift
 InlineStatusMessage.swift
+RemainingMinutesHero.swift
+BrandLockButton.swift
+CardContainer.swift
+WagerChips.swift
 
 Games/
 Crash/
@@ -123,15 +153,20 @@ HistoryViewModel.swift
 Resources/
 Assets.xcassets
 Sounds/
+Fonts/
+Outfit-Regular.ttf
+Outfit-Medium.ttf
+Outfit-SemiBold.ttf
+Outfit-Bold.ttf
 
 Docs/
 spec.md
 architecture.md
 data_flow.md
+styling.md
 llms/
 markdown-styling.md
 SwiftUI-LLMS.md
-
 ui-similar/
 ui-similar.md
 screens/
