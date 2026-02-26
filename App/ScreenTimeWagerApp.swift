@@ -7,15 +7,7 @@ struct DoubleTimeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                HomeView()
-            }
-            .onAppear {
-                appModel.checkDayReset()
-                Task {
-                    await appModel.refreshUsageAndRecomputeRemaining()
-                }
-            }
+            AppRootView()
         }
         .environment(appModel)
         .onChange(of: scenePhase) { _, newPhase in

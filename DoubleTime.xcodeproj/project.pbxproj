@@ -50,6 +50,34 @@
 		28B100052F700100008A0E70 /* InlineStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100052F700100008A0E70 /* InlineStatusMessage.swift */; };
 		28B100062F700100008A0E70 /* WagerChips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100062F700100008A0E70 /* WagerChips.swift */; };
 		27F200012F700500008A0E70 /* LockToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E200012F700500008A0E70 /* LockToggleButton.swift */; };
+		29B300012F800100008A0E70 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300012F800100008A0E70 /* AppRootView.swift */; };
+		29B300022F800100008A0E70 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300022F800100008A0E70 /* AppRouter.swift */; };
+		29B300032F800100008A0E70 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300032F800100008A0E70 /* GameEngine.swift */; };
+		29B300042F800100008A0E70 /* CrashEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300042F800100008A0E70 /* CrashEngine.swift */; };
+		29B300052F800100008A0E70 /* PlinkoEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300052F800100008A0E70 /* PlinkoEngine.swift */; };
+		29B300062F800100008A0E70 /* MinesEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300062F800100008A0E70 /* MinesEngine.swift */; };
+		29B300072F800100008A0E70 /* SlotsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300072F800100008A0E70 /* SlotsEngine.swift */; };
+		29B300082F800100008A0E70 /* HapticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300082F800100008A0E70 /* HapticsService.swift */; };
+		29B300092F800100008A0E70 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300092F800100008A0E70 /* AudioService.swift */; };
+		29B3000A2F800100008A0E70 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3000A2F800100008A0E70 /* Log.swift */; };
+		29B3000B2F800100008A0E70 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3000B2F800100008A0E70 /* OnboardingView.swift */; };
+		29B3000C2F800100008A0E70 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3000C2F800100008A0E70 /* OnboardingViewModel.swift */; };
+		29B3000D2F800100008A0E70 /* BrandLockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3000D2F800100008A0E70 /* BrandLockButton.swift */; };
+		29B3000E2F800100008A0E70 /* CrashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3000E2F800100008A0E70 /* CrashView.swift */; };
+		29B3000F2F800100008A0E70 /* CrashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3000F2F800100008A0E70 /* CrashViewModel.swift */; };
+		29B300102F800100008A0E70 /* PlinkoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300102F800100008A0E70 /* PlinkoView.swift */; };
+		29B300112F800100008A0E70 /* PlinkoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300112F800100008A0E70 /* PlinkoViewModel.swift */; };
+		29B300122F800100008A0E70 /* MinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300122F800100008A0E70 /* MinesView.swift */; };
+		29B300132F800100008A0E70 /* MinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300132F800100008A0E70 /* MinesViewModel.swift */; };
+		29B300142F800100008A0E70 /* SlotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300142F800100008A0E70 /* SlotsView.swift */; };
+		29B300152F800100008A0E70 /* SlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300152F800100008A0E70 /* SlotsViewModel.swift */; };
+		29B300162F800100008A0E70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300162F800100008A0E70 /* SettingsView.swift */; };
+		29B300172F800100008A0E70 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300172F800100008A0E70 /* SettingsViewModel.swift */; };
+		29B300182F800100008A0E70 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300182F800100008A0E70 /* HistoryView.swift */; };
+		29B300192F800100008A0E70 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300192F800100008A0E70 /* HistoryViewModel.swift */; };
+		29B3001A2F800100008A0E70 /* PlayContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3001A2F800100008A0E70 /* PlayContainerView.swift */; };
+		29B3001B2F800100008A0E70 /* GameSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3001B2F800100008A0E70 /* GameSessionModel.swift */; };
+		29B3001C2F800100008A0E70 /* WagerModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3001C2F800100008A0E70 /* WagerModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +125,34 @@
 		28A100052F700100008A0E70 /* InlineStatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineStatusMessage.swift; sourceTree = "<group>"; };
 		28A100062F700100008A0E70 /* WagerChips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagerChips.swift; sourceTree = "<group>"; };
 		27E200012F700500008A0E70 /* LockToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockToggleButton.swift; sourceTree = "<group>"; };
+		29A300012F800100008A0E70 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		29A300022F800100008A0E70 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		29A300032F800100008A0E70 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		29A300042F800100008A0E70 /* CrashEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashEngine.swift; sourceTree = "<group>"; };
+		29A300052F800100008A0E70 /* PlinkoEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlinkoEngine.swift; sourceTree = "<group>"; };
+		29A300062F800100008A0E70 /* MinesEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesEngine.swift; sourceTree = "<group>"; };
+		29A300072F800100008A0E70 /* SlotsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsEngine.swift; sourceTree = "<group>"; };
+		29A300082F800100008A0E70 /* HapticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsService.swift; sourceTree = "<group>"; };
+		29A300092F800100008A0E70 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		29A3000A2F800100008A0E70 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		29A3000B2F800100008A0E70 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		29A3000C2F800100008A0E70 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		29A3000D2F800100008A0E70 /* BrandLockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandLockButton.swift; sourceTree = "<group>"; };
+		29A3000E2F800100008A0E70 /* CrashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashView.swift; sourceTree = "<group>"; };
+		29A3000F2F800100008A0E70 /* CrashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashViewModel.swift; sourceTree = "<group>"; };
+		29A300102F800100008A0E70 /* PlinkoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlinkoView.swift; sourceTree = "<group>"; };
+		29A300112F800100008A0E70 /* PlinkoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlinkoViewModel.swift; sourceTree = "<group>"; };
+		29A300122F800100008A0E70 /* MinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesView.swift; sourceTree = "<group>"; };
+		29A300132F800100008A0E70 /* MinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesViewModel.swift; sourceTree = "<group>"; };
+		29A300142F800100008A0E70 /* SlotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsView.swift; sourceTree = "<group>"; };
+		29A300152F800100008A0E70 /* SlotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsViewModel.swift; sourceTree = "<group>"; };
+		29A300162F800100008A0E70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		29A300172F800100008A0E70 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		29A300182F800100008A0E70 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		29A300192F800100008A0E70 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		29A3001A2F800100008A0E70 /* PlayContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayContainerView.swift; sourceTree = "<group>"; };
+		29A3001B2F800100008A0E70 /* GameSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionModel.swift; sourceTree = "<group>"; };
+		29A3001C2F800100008A0E70 /* WagerModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagerModalView.swift; sourceTree = "<group>"; };
 		27F653BD2F4FE54C00F1E977 /* DoubleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +170,8 @@
 		277546182F4FE83F008A0E70 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				29A300012F800100008A0E70 /* AppRootView.swift */,
+				29A300022F800100008A0E70 /* AppRouter.swift */,
 				277546172F4FE83F008A0E70 /* ScreenTimeWagerApp.swift */,
 			);
 			path = App;
@@ -141,6 +199,11 @@
 		2775461E2F4FE83F008A0E70 /* Engines */ = {
 			isa = PBXGroup;
 			children = (
+				29A300042F800100008A0E70 /* CrashEngine.swift */,
+				29A300032F800100008A0E70 /* GameEngine.swift */,
+				29A300062F800100008A0E70 /* MinesEngine.swift */,
+				29A300052F800100008A0E70 /* PlinkoEngine.swift */,
+				29A300072F800100008A0E70 /* SlotsEngine.swift */,
 			);
 			path = Engines;
 			sourceTree = "<group>";
@@ -180,6 +243,8 @@
 		277546252F4FE83F008A0E70 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
+				29A300092F800100008A0E70 /* AudioService.swift */,
+				29A300082F800100008A0E70 /* HapticsService.swift */,
 			);
 			path = Feedback;
 			sourceTree = "<group>";
@@ -187,6 +252,7 @@
 		277546272F4FE83F008A0E70 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
+				29A3000A2F800100008A0E70 /* Log.swift */,
 			);
 			path = Logging;
 			sourceTree = "<group>";
@@ -227,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				27A0000E2F500000008A0E70 /* AppModel.swift */,
+				29A3001B2F800100008A0E70 /* GameSessionModel.swift */,
 				27A0000C2F500000008A0E70 /* LockStateModel.swift */,
 				27A0000A2F500000008A0E70 /* TimeBudgetModel.swift */,
 				27A0000D2F500000008A0E70 /* TransactionsModel.swift */,
@@ -249,6 +316,8 @@
 		277546322F4FE83F008A0E70 /* Crash */ = {
 			isa = PBXGroup;
 			children = (
+				29A3000E2F800100008A0E70 /* CrashView.swift */,
+				29A3000F2F800100008A0E70 /* CrashViewModel.swift */,
 			);
 			path = Crash;
 			sourceTree = "<group>";
@@ -256,6 +325,8 @@
 		277546342F4FE83F008A0E70 /* Mines */ = {
 			isa = PBXGroup;
 			children = (
+				29A300122F800100008A0E70 /* MinesView.swift */,
+				29A300132F800100008A0E70 /* MinesViewModel.swift */,
 			);
 			path = Mines;
 			sourceTree = "<group>";
@@ -263,6 +334,8 @@
 		277546362F4FE83F008A0E70 /* Plinko */ = {
 			isa = PBXGroup;
 			children = (
+				29A300102F800100008A0E70 /* PlinkoView.swift */,
+				29A300112F800100008A0E70 /* PlinkoViewModel.swift */,
 			);
 			path = Plinko;
 			sourceTree = "<group>";
@@ -270,16 +343,28 @@
 		277546382F4FE83F008A0E70 /* Slots */ = {
 			isa = PBXGroup;
 			children = (
+				29A300142F800100008A0E70 /* SlotsView.swift */,
+				29A300152F800100008A0E70 /* SlotsViewModel.swift */,
 			);
 			path = Slots;
+			sourceTree = "<group>";
+		};
+		29C3001D2F800100008A0E70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				29A3001C2F800100008A0E70 /* WagerModalView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		277546392F4FE83F008A0E70 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				29C3001D2F800100008A0E70 /* Components */,
 				277546322F4FE83F008A0E70 /* Crash */,
 				277546342F4FE83F008A0E70 /* Mines */,
 				277546362F4FE83F008A0E70 /* Plinko */,
+				29A3001A2F800100008A0E70 /* PlayContainerView.swift */,
 				277546382F4FE83F008A0E70 /* Slots */,
 			);
 			path = Games;
@@ -288,6 +373,8 @@
 		2775463B2F4FE83F008A0E70 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				29A300182F800100008A0E70 /* HistoryView.swift */,
+				29A300192F800100008A0E70 /* HistoryViewModel.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -295,6 +382,7 @@
 		2775463D2F4FE83F008A0E70 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				29A3000D2F800100008A0E70 /* BrandLockButton.swift */,
 				28A100032F700100008A0E70 /* CardContainer.swift */,
 				28A100052F700100008A0E70 /* InlineStatusMessage.swift */,
 				27E200012F700500008A0E70 /* LockToggleButton.swift */,
@@ -318,6 +406,8 @@
 		277546402F4FE83F008A0E70 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				29A3000B2F800100008A0E70 /* OnboardingView.swift */,
+				29A3000C2F800100008A0E70 /* OnboardingViewModel.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -325,6 +415,8 @@
 		277546422F4FE83F008A0E70 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				29A300162F800100008A0E70 /* SettingsView.swift */,
+				29A300172F800100008A0E70 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -508,6 +600,34 @@
 				28B100052F700100008A0E70 /* InlineStatusMessage.swift in Sources */,
 				28B100062F700100008A0E70 /* WagerChips.swift in Sources */,
 				27F200012F700500008A0E70 /* LockToggleButton.swift in Sources */,
+				29B300012F800100008A0E70 /* AppRootView.swift in Sources */,
+				29B300022F800100008A0E70 /* AppRouter.swift in Sources */,
+				29B300032F800100008A0E70 /* GameEngine.swift in Sources */,
+				29B300042F800100008A0E70 /* CrashEngine.swift in Sources */,
+				29B300052F800100008A0E70 /* PlinkoEngine.swift in Sources */,
+				29B300062F800100008A0E70 /* MinesEngine.swift in Sources */,
+				29B300072F800100008A0E70 /* SlotsEngine.swift in Sources */,
+				29B300082F800100008A0E70 /* HapticsService.swift in Sources */,
+				29B300092F800100008A0E70 /* AudioService.swift in Sources */,
+				29B3000A2F800100008A0E70 /* Log.swift in Sources */,
+				29B3000B2F800100008A0E70 /* OnboardingView.swift in Sources */,
+				29B3000C2F800100008A0E70 /* OnboardingViewModel.swift in Sources */,
+				29B3000D2F800100008A0E70 /* BrandLockButton.swift in Sources */,
+				29B3000E2F800100008A0E70 /* CrashView.swift in Sources */,
+				29B3000F2F800100008A0E70 /* CrashViewModel.swift in Sources */,
+				29B300102F800100008A0E70 /* PlinkoView.swift in Sources */,
+				29B300112F800100008A0E70 /* PlinkoViewModel.swift in Sources */,
+				29B300122F800100008A0E70 /* MinesView.swift in Sources */,
+				29B300132F800100008A0E70 /* MinesViewModel.swift in Sources */,
+				29B300142F800100008A0E70 /* SlotsView.swift in Sources */,
+				29B300152F800100008A0E70 /* SlotsViewModel.swift in Sources */,
+				29B300162F800100008A0E70 /* SettingsView.swift in Sources */,
+				29B300172F800100008A0E70 /* SettingsViewModel.swift in Sources */,
+				29B300182F800100008A0E70 /* HistoryView.swift in Sources */,
+				29B300192F800100008A0E70 /* HistoryViewModel.swift in Sources */,
+				29B3001A2F800100008A0E70 /* PlayContainerView.swift in Sources */,
+				29B3001B2F800100008A0E70 /* GameSessionModel.swift in Sources */,
+				29B3001C2F800100008A0E70 /* WagerModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

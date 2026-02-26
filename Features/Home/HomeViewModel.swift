@@ -1,12 +1,12 @@
 import SwiftUI
-import UIKit
+@preconcurrency import UIKit
 
 /// Thin orchestration layer for the Home screen.
 ///
 /// All state lives in the global models (`AppModel`); this ViewModel
 /// exists to coordinate UI actions (e.g. pull-to-refresh, lock toggle)
 /// without exposing service calls directly to the View.
-@Observable
+@MainActor @Observable
 final class HomeViewModel {
 
     // MARK: - Dependencies

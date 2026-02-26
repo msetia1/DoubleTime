@@ -8,7 +8,6 @@ struct HomeView: View {
 
     @Environment(AppModel.self) private var appModel
     @State private var viewModel: HomeViewModel?
-    @State private var selectedWagerPreset: Int?
 
     var body: some View {
         ScrollView {
@@ -23,18 +22,6 @@ struct HomeView: View {
                 )
                 .padding(.horizontal, 16)
                 .padding(.top, 24)
-
-                // MARK: Shared Wager Chips (used by future game screens)
-                CardContainer {
-                    WagerChips(
-                        maxWagerMinutes: max(0, resolvedViewModel.remainingMinutes),
-                        currentRemainingMinutes: resolvedViewModel.remainingMinutes,
-                        selectedMinutes: selectedWagerPreset
-                    ) { selected in
-                        selectedWagerPreset = selected
-                    }
-                }
-                .padding(.horizontal, 16)
 
                 // MARK: Lock Toggle
                 LockToggleButton(
@@ -70,9 +57,6 @@ struct HomeView: View {
         .onAppear {
             if viewModel == nil {
                 viewModel = HomeViewModel(appModel: appModel)
-            }
-            if selectedWagerPreset == nil {
-                selectedWagerPreset = max(1, min(5, resolvedViewModel.remainingMinutes))
             }
         }
         .navigationTitle("Home")
