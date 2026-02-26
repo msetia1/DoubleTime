@@ -7,13 +7,8 @@ struct DoubleTimeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            VStack(spacing: 12) {
-                Text("\(appModel.remainingMinutes)")
-                    .font(Typography.Token.heroMetric())
-                    .foregroundStyle(.primary)
-                Text("minutes remaining")
-                    .font(Typography.Token.secondary())
-                    .foregroundStyle(.secondary)
+            NavigationStack {
+                HomeView()
             }
             .onAppear {
                 appModel.checkDayReset()

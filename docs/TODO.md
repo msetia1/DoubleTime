@@ -61,13 +61,12 @@
   - **Acceptance criteria:** Unlock requires `remainingMinutes > 0`; zero state keeps locked; shielding flips correctly on derived policy changes.
   - **Touch points:** `Core/State/AppModel.swift`, `Core/State/LockStateModel.swift`, `Core/Services/ScreenTime/ShieldService.swift`.
 
-- [~] **Implement usage refresh pipeline**
+- [x] **Implement usage refresh pipeline**
   - **Objective:** Add `refreshUsageAndRecomputeRemaining()` and wire triggers (launch, foreground, pull-to-refresh, lock/unlock attempts, post-game recompute).
   - **Inputs:** `Docs/architecture.md` (Remaining Minutes Refresh Strategy), `Docs/data_flow.md` (Sequences 1-3, 5, 7, 9).
   - **Acceptance criteria:** Usage refresh updates `usageMinutesToday` and recomputes remaining; no periodic countdown timer is introduced.
   - **Touch points:** `Core/State/AppModel.swift`, `Core/State/UsageModel.swift`, `Features/Home/HomeViewModel.swift`.
-  - **Done:** `refreshUsageAndRecomputeRemaining()` in AppModel, scenePhase `.active` trigger, launch trigger, lock/unlock and post-game calls.
-  - **Remaining:** Pull-to-refresh trigger (needs `HomeViewModel.swift` from Phase 4).
+  - **Done:** `refreshUsageAndRecomputeRemaining()` in AppModel, scenePhase `.active` trigger, launch trigger, lock/unlock and post-game calls, pull-to-refresh via `HomeViewModel.refresh()` and `.refreshable` in `HomeView.swift`.
 
 ## Phase 4 - Home UX and Controls
 
