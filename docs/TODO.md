@@ -91,7 +91,7 @@
 
 ## Phase 5 - Game Loop Implementation
 
-- [ ] **Implement shared game transaction + pending wager flow**
+- [x] **Implement shared game transaction + pending wager flow**
   - **Objective:** Standardize play lifecycle: validate wager, persist pending wager, resolve, apply `bonusMinutesFromGames`, append transaction, clear pending.
   - **Inputs:** `Docs/architecture.md` (Game Architecture, Mid-Game Kill Forfeit), `Docs/data_flow.md` (Sequence 9).
   - **Acceptance criteria:** Mid-game kill applies forfeit on next launch exactly once; successful resolve clears pending wager and persists transaction.

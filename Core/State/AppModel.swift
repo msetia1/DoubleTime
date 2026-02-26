@@ -97,8 +97,14 @@ final class AppModel {
 
     // MARK: - Game Wager Lifecycle
 
-    /// Persists a pending wager when a game starts.
-    func setPendingWager(gameType: GameType, wagerMinutes: Int) {
+    /// Validates and persists a pending wager when a game starts.
+    func setPendingWager(gameType: GameType, wagerMinutes: Int) throws {
+        guard wagerMinutes > 0 else {
+            throw WagerValidationError.zeroOrNegativeWager
+        }
+        guard wagerMinutes <= remainingMinutes else {
+            throw WagerValidationError.exceedsRemainingMinutes
+        }
         let pending = PendingWager(gameType: gameType, wagerMinutes: wagerMinutes)
         store.setCodable(pending, forKey: Keys.pendingWager)
     }
@@ -162,6 +168,11 @@ final class AppModel {
 }
 
 // MARK: - Supporting Types
+
+enum WagerValidationError: Error {
+    case zeroOrNegativeWager
+    case exceedsRemainingMinutes
+}
 
 private struct PendingWager: Codable {
     let gameType: GameType
