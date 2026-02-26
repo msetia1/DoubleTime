@@ -97,7 +97,7 @@
   - **Acceptance criteria:** Mid-game kill applies forfeit on next launch exactly once; successful resolve clears pending wager and persists transaction.
   - **Touch points:** `Core/Domain/Models/GameTransaction.swift`, `Core/State/TransactionsModel.swift`, `Core/State/AppModel.swift`, `Features/Games/*/*ViewModel.swift`.
 
-- [ ] **Implement Crash feature end-to-end**
+- [x] **Implement Crash feature end-to-end**
   - **Objective:** Implement Crash engine + view model + UI using finalized Crash doc rules and shared transaction flow.
   - **Inputs:** `Docs/games/crash.md`, `Docs/spec.md` (Wager UI), `Docs/data_flow.md` (Sequences 8-10).
   - **Acceptance criteria:** Wager preview updates in real time; resolve applies floor-rounded delta to `bonusMinutesFromGames`; no auto-unlock after win.
