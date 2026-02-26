@@ -145,9 +145,19 @@ The control’s visual states, motion behavior, and copy must follow `Docs/styli
 
 ### Game resolution and rounding
 
-All game outcomes resolve to whole-minute deltas and apply **floor rounding only**. There is no minimum “+1 minute” house rule.
+All game outcomes resolve to whole-minute deltas and apply **floor rounding only**. There is no minimum "+1 minute" house rule.
 
 If the app is killed or restarted **mid-game**, the current wager is **forfeit**.
+
+### Payout cap (minutes-until-midnight)
+
+Game payouts are capped so that `remainingMinutes` never exceeds the minutes remaining until midnight (23:59). This prevents absurd balances from high-multiplier wins.
+
+- **minutesUntilMidnight** = minutes from now until 23:59 today.
+- After computing raw deltaMinutes, clamp so that `(currentRemainingMinutes + deltaMinutes) <= minutesUntilMidnight`.
+- If the raw delta would exceed this, deltaMinutes is reduced to `minutesUntilMidnight - currentRemainingMinutes`.
+- Losses are never capped (deltaMinutes is negative, no clamp needed).
+- The capped payout is what the player sees in the result screen.
 
 ### Wager UI (real-time feedback)
 

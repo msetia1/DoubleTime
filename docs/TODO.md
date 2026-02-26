@@ -14,7 +14,7 @@
 
 ## Phase 1 - Planning Baseline
 
-- [ ] **Lock game-specific rule docs before coding game engines**
+- [x] **Lock game-specific rule docs before coding game engines**
   - **Objective:** Fill `Docs/games/*.md` with final per-game inputs, outcomes, and floor-rounding behavior so implementation does not invent mechanics.
   - **Inputs:** `Docs/spec.md` (Core Logic), `Docs/data_flow.md` (Sequences 8-10), `Docs/games/*.md`.
   - **Acceptance criteria:** Each game doc defines wager inputs, resolve output (`deltaMinutes`), and at least one worked example using whole-minute floor rounding.
