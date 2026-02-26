@@ -20,7 +20,7 @@
   - **Acceptance criteria:** Each game doc defines wager inputs, resolve output (`deltaMinutes`), and at least one worked example using whole-minute floor rounding.
   - **Touch points:** `Docs/games/crash.md`, `Docs/games/plinko.md`, `Docs/games/mines.md`, `Docs/games/slots.md`.
 
-- [ ] **Create a style-adoption checklist from the finalized styling spec**
+- [x] **Create a style-adoption checklist from the finalized styling spec**
   - **Objective:** Convert `Docs/styling.md` into a concrete implementation checklist so all feature work applies the same standards.
   - **Inputs:** `Docs/spec.md` (UX and controls), `Docs/styling.md`, `Docs/ui-similar/ui-similar.md`.
   - **Acceptance criteria:** Checklist covers typography token usage (`Typography.swift`), brand color rules, spacing scale, lock-state styling, exact copy strings, and accessibility constraints from `Docs/styling.md`.
