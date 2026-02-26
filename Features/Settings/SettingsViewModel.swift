@@ -1,16 +1,33 @@
-// Stub generated for project scaffolding. Implement later.
 import SwiftUI
+import FamilyControls
 
 @Observable
 final class SettingsViewModel {
 
     private let appModel: AppModel
+    var isAuthorized: Bool
 
     init(appModel: AppModel) {
         self.appModel = appModel
+        self.isAuthorized = appModel.isScreenTimeAuthorized
     }
 
-    // TODO: Daily allowance editing
-    // TODO: App selection picker
-    // TODO: Screen Time authorization status
+    // MARK: - Authorization
+
+    @discardableResult
+    func requestAuthorization() async -> Bool {
+        let result = await appModel.requestScreenTimeAuthorization()
+        isAuthorized = appModel.isScreenTimeAuthorized
+        return result
+    }
+
+    // MARK: - App Selection
+
+    var hasSelection: Bool { appModel.hasAppSelection }
+
+    var selection: FamilyActivitySelection { appModel.appSelection }
+
+    func updateSelection(_ newSelection: FamilyActivitySelection) {
+        appModel.updateAppSelection(newSelection)
+    }
 }

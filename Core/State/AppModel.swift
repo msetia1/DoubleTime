@@ -1,4 +1,5 @@
 import Foundation
+import FamilyControls
 
 @Observable
 final class AppModel {
@@ -21,6 +22,7 @@ final class AppModel {
     private let shieldService = ShieldService()
     private let usageService = DeviceActivityUsageService()
     private let selectionService = AppSelectionService()
+    private let authService = ScreenTimeAuthorizationService()
 
     // MARK: - Persistence
 
@@ -30,6 +32,28 @@ final class AppModel {
         self.store = store
         loadPersistedState()
         handlePendingWagerForfeit()
+    }
+
+    // MARK: - Screen Time Authorization
+
+    var isScreenTimeAuthorized: Bool { authService.isAuthorized }
+
+    func requestScreenTimeAuthorization() async -> Bool {
+        await authService.requestAuthorization()
+    }
+
+    // MARK: - App Selection
+
+    var appSelection: FamilyActivitySelection {
+        selectionService.selection
+    }
+
+    var hasAppSelection: Bool { selectionService.hasSelection }
+
+    /// Updates the restricted app selection, then re-enforces shields.
+    func updateAppSelection(_ newSelection: FamilyActivitySelection) {
+        selectionService.selection = newSelection
+        enforceShieldPolicy()
     }
 
     // MARK: - Day Reset
