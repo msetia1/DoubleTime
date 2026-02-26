@@ -9,6 +9,9 @@ struct WagerModalView: View {
     @State private var errorMessage: String?
     @Environment(\.dismiss) private var dismiss
 
+    private var effectiveMinutes: Int { selectedMinutes ?? 1 }
+    private var remainingAfterWager: Int { max(0, remainingMinutes - effectiveMinutes) }
+
     var body: some View {
         VStack(spacing: 24) {
             Text(game.rawValue.capitalized)
@@ -18,11 +21,14 @@ struct WagerModalView: View {
             WagerChips(
                 maxWagerMinutes: max(0, remainingMinutes),
                 currentRemainingMinutes: remainingMinutes,
-                selectedMinutes: selectedMinutes
+                selectedMinutes: selectedMinutes,
+                showProjection: false
             ) { selected in
                 selectedMinutes = selected
                 errorMessage = nil
             }
+
+            wagerSummaryLine
 
             if let error = errorMessage {
                 Text(error)
@@ -31,7 +37,7 @@ struct WagerModalView: View {
             }
 
             Button("Place Wager") {
-                let minutes = selectedMinutes ?? 1
+                let minutes = effectiveMinutes
                 if minutes <= 0 {
                     errorMessage = "Choose at least 1 minute"
                 } else if minutes > remainingMinutes {
@@ -51,5 +57,21 @@ struct WagerModalView: View {
                 selectedMinutes = max(1, min(5, remainingMinutes))
             }
         }
+    }
+
+    private var wagerSummaryLine: some View {
+        HStack(spacing: 6) {
+            Text("Wager: \(effectiveMinutes) min")
+                .font(Typography.Token.outcome())
+                .fontWeight(.bold)
+                .foregroundStyle(BrandPalette.accentEnd)
+            Text("|")
+                .font(Typography.Token.secondary())
+                .foregroundStyle(.secondary)
+            Text("\(remainingAfterWager) minutes left")
+                .font(Typography.Token.secondary())
+                .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, alignment: .center)
     }
 }

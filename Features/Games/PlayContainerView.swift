@@ -56,6 +56,13 @@ struct PlayContainerView: View {
         .onChange(of: selectedGame) { _, _ in
             presentWagerIfNeeded()
         }
+        .onChange(of: gameSession.currentGame) { _, game in
+            if game == nil && !showWagerModal {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    showWagerModal = true
+                }
+            }
+        }
     }
 
     private func presentWagerIfNeeded() {

@@ -6,6 +6,7 @@ struct WagerChips: View {
     let currentRemainingMinutes: Int
     let selectedMinutes: Int?
     var placeholderMultiplier: Double = 1.8
+    var showProjection: Bool = true
     var onSelect: (Int) -> Void
 
     var body: some View {
@@ -15,9 +16,11 @@ struct WagerChips: View {
                     .font(Typography.Token.secondary())
                     .foregroundStyle(.secondary)
             } else {
-                HStack {
-                    Spacer()
-                    multiplierBadge
+                if showProjection {
+                    HStack {
+                        Spacer()
+                        multiplierBadge
+                    }
                 }
 
                 Picker("Wager minutes", selection: selectionBinding) {
@@ -40,7 +43,9 @@ struct WagerChips: View {
                 .frame(height: 180)
                 .clipped()
 
-                projectionPanel
+                if showProjection {
+                    projectionPanel
+                }
             }
         }
     }
