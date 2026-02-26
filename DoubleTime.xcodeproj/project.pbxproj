@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		277546542F4FE83F008A0E70 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546192F4FE83F008A0E70 /* Typography.swift */; };
 		277546552F4FE83F008A0E70 /* ScreenTimeWagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546172F4FE83F008A0E70 /* ScreenTimeWagerApp.swift */; };
+		277546572F4FE83F008A0E70 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464C2F4FE83F008A0E70 /* Outfit-SemiBold.ttf */; };
+		277546582F4FE83F008A0E70 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464B2F4FE83F008A0E70 /* Outfit-Regular.ttf */; };
+		2775465A2F4FE83F008A0E70 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546452F4FE83F008A0E70 /* Outfit-Black.ttf */; };
+		277546602F4FE83F008A0E70 /* Outfit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464D2F4FE83F008A0E70 /* Outfit-Thin.ttf */; };
+		277546642F4FE83F008A0E70 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546462F4FE83F008A0E70 /* Outfit-Bold.ttf */; };
+		277546652F4FE83F008A0E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277546512F4FE83F008A0E70 /* Assets.xcassets */; };
+		277546662F4FE83F008A0E70 /* Outfit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546472F4FE83F008A0E70 /* Outfit-ExtraBold.ttf */; };
+		277546672F4FE83F008A0E70 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464A2F4FE83F008A0E70 /* Outfit-Medium.ttf */; };
+		2775466B2F4FE83F008A0E70 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546492F4FE83F008A0E70 /* Outfit-Light.ttf */; };
+		2775466C2F4FE83F008A0E70 /* Outfit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546482F4FE83F008A0E70 /* Outfit-ExtraLight.ttf */; };
 		27B000012F500000008A0E70 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000012F500000008A0E70 /* GameType.swift */; };
 		27B000022F500000008A0E70 /* TimeBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000022F500000008A0E70 /* TimeBudget.swift */; };
 		27B000032F500000008A0E70 /* GameTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000032F500000008A0E70 /* GameTransaction.swift */; };
@@ -26,16 +36,10 @@
 		27B0000F2F500000008A0E70 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0000F2F500000008A0E70 /* KeyValueStore.swift */; };
 		27B000102F500000008A0E70 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000102F500000008A0E70 /* UserDefaultsStore.swift */; };
 		27B000112F500000008A0E70 /* CodableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000112F500000008A0E70 /* CodableStore.swift */; };
-		277546572F4FE83F008A0E70 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464C2F4FE83F008A0E70 /* Outfit-SemiBold.ttf */; };
-		277546582F4FE83F008A0E70 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464B2F4FE83F008A0E70 /* Outfit-Regular.ttf */; };
-		2775465A2F4FE83F008A0E70 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546452F4FE83F008A0E70 /* Outfit-Black.ttf */; };
-		277546602F4FE83F008A0E70 /* Outfit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464D2F4FE83F008A0E70 /* Outfit-Thin.ttf */; };
-		277546642F4FE83F008A0E70 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546462F4FE83F008A0E70 /* Outfit-Bold.ttf */; };
-		277546652F4FE83F008A0E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277546512F4FE83F008A0E70 /* Assets.xcassets */; };
-		277546662F4FE83F008A0E70 /* Outfit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546472F4FE83F008A0E70 /* Outfit-ExtraBold.ttf */; };
-		277546672F4FE83F008A0E70 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464A2F4FE83F008A0E70 /* Outfit-Medium.ttf */; };
-		2775466B2F4FE83F008A0E70 /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546492F4FE83F008A0E70 /* Outfit-Light.ttf */; };
-		2775466C2F4FE83F008A0E70 /* Outfit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546482F4FE83F008A0E70 /* Outfit-ExtraLight.ttf */; };
+		27D000012F500300008A0E70 /* ScreenTimeAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C000012F500300008A0E70 /* ScreenTimeAuthorizationService.swift */; };
+		27D000022F500300008A0E70 /* AppSelectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C000022F500300008A0E70 /* AppSelectionService.swift */; };
+		27D000032F500300008A0E70 /* ShieldService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C000032F500300008A0E70 /* ShieldService.swift */; };
+		27D000042F500300008A0E70 /* DeviceActivityUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C000042F500300008A0E70 /* DeviceActivityUsageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,7 @@
 		2775464C2F4FE83F008A0E70 /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		2775464D2F4FE83F008A0E70 /* Outfit-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Thin.ttf"; sourceTree = "<group>"; };
 		277546512F4FE83F008A0E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		277546762F50A2D9008A0E70 /* DoubleTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DoubleTime.entitlements; sourceTree = "<group>"; };
 		27A000012F500000008A0E70 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		27A000022F500000008A0E70 /* TimeBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBudget.swift; sourceTree = "<group>"; };
 		27A000032F500000008A0E70 /* GameTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTransaction.swift; sourceTree = "<group>"; };
@@ -68,6 +73,10 @@
 		27A0000F2F500000008A0E70 /* KeyValueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
 		27A000102F500000008A0E70 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 		27A000112F500000008A0E70 /* CodableStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStore.swift; sourceTree = "<group>"; };
+		27C000012F500300008A0E70 /* ScreenTimeAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeAuthorizationService.swift; sourceTree = "<group>"; };
+		27C000022F500300008A0E70 /* AppSelectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionService.swift; sourceTree = "<group>"; };
+		27C000032F500300008A0E70 /* ShieldService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldService.swift; sourceTree = "<group>"; };
+		27C000042F500300008A0E70 /* DeviceActivityUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityUsageService.swift; sourceTree = "<group>"; };
 		27F653BD2F4FE54C00F1E977 /* DoubleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +182,10 @@
 		2775462B2F4FE83F008A0E70 /* ScreenTime */ = {
 			isa = PBXGroup;
 			children = (
+				27C000022F500300008A0E70 /* AppSelectionService.swift */,
+				27C000042F500300008A0E70 /* DeviceActivityUsageService.swift */,
+				27C000012F500300008A0E70 /* ScreenTimeAuthorizationService.swift */,
+				27C000032F500300008A0E70 /* ShieldService.swift */,
 			);
 			path = ScreenTime;
 			sourceTree = "<group>";
@@ -334,6 +347,7 @@
 		27F653B42F4FE54C00F1E977 = {
 			isa = PBXGroup;
 			children = (
+				277546762F50A2D9008A0E70 /* DoubleTime.entitlements */,
 				277546182F4FE83F008A0E70 /* App */,
 				277546302F4FE83F008A0E70 /* Core */,
 				277546442F4FE83F008A0E70 /* Features */,
@@ -450,6 +464,10 @@
 				27B0000F2F500000008A0E70 /* KeyValueStore.swift in Sources */,
 				27B000102F500000008A0E70 /* UserDefaultsStore.swift in Sources */,
 				27B000112F500000008A0E70 /* CodableStore.swift in Sources */,
+				27D000012F500300008A0E70 /* ScreenTimeAuthorizationService.swift in Sources */,
+				27D000022F500300008A0E70 /* AppSelectionService.swift in Sources */,
+				27D000032F500300008A0E70 /* ShieldService.swift in Sources */,
+				27D000042F500300008A0E70 /* DeviceActivityUsageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DoubleTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4CC6N69JLG;
@@ -608,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DoubleTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4CC6N69JLG;

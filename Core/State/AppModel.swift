@@ -16,6 +16,12 @@ final class AppModel {
         )
     }
 
+    // MARK: - Services
+
+    private let shieldService = ShieldService()
+    private let usageService = DeviceActivityUsageService()
+    private let selectionService = AppSelectionService()
+
     // MARK: - Persistence
 
     private let store: KeyValueStore
@@ -38,6 +44,55 @@ final class AppModel {
             store.set(today, forKey: Keys.lastDayKey)
             save()
         }
+    }
+
+    // MARK: - Shield Policy
+
+    /// Applies or clears shields based on lock state and remaining minutes.
+    func enforceShieldPolicy() {
+        let tokens = selectionService.applicationTokens
+        guard !tokens.isEmpty else { return }
+
+        if lockState.isUnlockedEffective(remainingMinutes: remainingMinutes) {
+            shieldService.clearShields()
+        } else {
+            shieldService.applyShields(for: tokens)
+        }
+    }
+
+    // MARK: - Usage Refresh
+
+    /// Fetches latest usage from Screen Time, recomputes remaining, and enforces shields.
+    func refreshUsageAndRecomputeRemaining() async {
+        let tokens = selectionService.applicationTokens
+        let mins = await usageService.fetchUsageMinutesToday(for: tokens)
+        usage.usageMinutesToday = mins
+        usage.lastUsageRefreshDate = Date()
+        enforceShieldPolicy()
+        save()
+    }
+
+    // MARK: - Lock Toggle
+
+    /// Toggles the lock state. Returns true if the toggle succeeded.
+    @discardableResult
+    func toggleLock() async -> Bool {
+        await refreshUsageAndRecomputeRemaining()
+
+        if lockState.userWantsUnlocked {
+            // Currently unlocked → lock
+            lockState.userWantsUnlocked = false
+        } else {
+            // Currently locked → try to unlock
+            guard lockState.unlockAllowed(remainingMinutes: remainingMinutes) else {
+                return false
+            }
+            lockState.userWantsUnlocked = true
+        }
+
+        enforceShieldPolicy()
+        save()
+        return true
     }
 
     // MARK: - Game Wager Lifecycle
@@ -64,6 +119,7 @@ final class AppModel {
         )
         transactions.append(transaction)
         clearPendingWager()
+        enforceShieldPolicy()
         save()
     }
 

@@ -48,23 +48,26 @@
 
 ## Phase 3 - Screen Time Integration
 
-- [ ] **Implement Screen Time service adapters (apps-only)**
+- [x] **Implement Screen Time service adapters (apps-only)**
   - **Objective:** Implement authorization, selection, shielding, and usage adapters behind service boundaries.
   - **Inputs:** `Docs/architecture.md` (Screen Time Integration), `Docs/spec.md` (App selection, Locking policy).
   - **Acceptance criteria:** Services compile and expose plain Swift values; only Services import Screen Time frameworks; selection is apps-only.
   - **Touch points:** `Core/Services/ScreenTime/ScreenTimeAuthorizationService.swift`, `Core/Services/ScreenTime/AppSelectionService.swift`, `Core/Services/ScreenTime/ShieldService.swift`, `Core/Services/ScreenTime/DeviceActivityUsageService.swift`.
+  - **Note:** `DeviceActivityUsageService.fetchUsageMinutesToday` is a stub (returns 0) until a DeviceActivityReport extension is built. `AppSelection.swift` simplified to a `hasSelection: Bool` flag since FamilyControls tokens are opaque.
 
-- [ ] **Implement lock policy coordinator and enforcement**
+- [x] **Implement lock policy coordinator and enforcement**
   - **Objective:** Centralize `unlockAllowed` / `isUnlockedEffective` evaluation and shield enforcement in one coordinator path.
   - **Inputs:** `Docs/architecture.md` (Lock / Unlock Policy and UX), `Docs/data_flow.md` (Sequences 4-7).
   - **Acceptance criteria:** Unlock requires `remainingMinutes > 0`; zero state keeps locked; shielding flips correctly on derived policy changes.
   - **Touch points:** `Core/State/AppModel.swift`, `Core/State/LockStateModel.swift`, `Core/Services/ScreenTime/ShieldService.swift`.
 
-- [ ] **Implement usage refresh pipeline**
+- [~] **Implement usage refresh pipeline**
   - **Objective:** Add `refreshUsageAndRecomputeRemaining()` and wire triggers (launch, foreground, pull-to-refresh, lock/unlock attempts, post-game recompute).
   - **Inputs:** `Docs/architecture.md` (Remaining Minutes Refresh Strategy), `Docs/data_flow.md` (Sequences 1-3, 5, 7, 9).
   - **Acceptance criteria:** Usage refresh updates `usageMinutesToday` and recomputes remaining; no periodic countdown timer is introduced.
   - **Touch points:** `Core/State/AppModel.swift`, `Core/State/UsageModel.swift`, `Features/Home/HomeViewModel.swift`.
+  - **Done:** `refreshUsageAndRecomputeRemaining()` in AppModel, scenePhase `.active` trigger, launch trigger, lock/unlock and post-game calls.
+  - **Remaining:** Pull-to-refresh trigger (needs `HomeViewModel.swift` from Phase 4).
 
 ## Phase 4 - Home UX and Controls
 
