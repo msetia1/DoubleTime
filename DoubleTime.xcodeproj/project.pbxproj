@@ -43,6 +43,12 @@
 		27F100012F600400008A0E70 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E100012F600400008A0E70 /* HomeView.swift */; };
 		27F100022F600400008A0E70 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E100022F600400008A0E70 /* HomeViewModel.swift */; };
 		27F100032F600400008A0E70 /* RemainingMinutesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E100032F600400008A0E70 /* RemainingMinutesCard.swift */; };
+		28B100012F700100008A0E70 /* BrandPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100012F700100008A0E70 /* BrandPalette.swift */; };
+		28B100022F700100008A0E70 /* BrandedActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100022F700100008A0E70 /* BrandedActionButtonStyle.swift */; };
+		28B100032F700100008A0E70 /* CardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100032F700100008A0E70 /* CardContainer.swift */; };
+		28B100042F700100008A0E70 /* RemainingMinutesHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100042F700100008A0E70 /* RemainingMinutesHero.swift */; };
+		28B100052F700100008A0E70 /* InlineStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100052F700100008A0E70 /* InlineStatusMessage.swift */; };
+		28B100062F700100008A0E70 /* WagerChips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100062F700100008A0E70 /* WagerChips.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +89,12 @@
 		27E100012F600400008A0E70 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		27E100022F600400008A0E70 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		27E100032F600400008A0E70 /* RemainingMinutesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingMinutesCard.swift; sourceTree = "<group>"; };
+		28A100012F700100008A0E70 /* BrandPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPalette.swift; sourceTree = "<group>"; };
+		28A100022F700100008A0E70 /* BrandedActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandedActionButtonStyle.swift; sourceTree = "<group>"; };
+		28A100032F700100008A0E70 /* CardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainer.swift; sourceTree = "<group>"; };
+		28A100042F700100008A0E70 /* RemainingMinutesHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingMinutesHero.swift; sourceTree = "<group>"; };
+		28A100052F700100008A0E70 /* InlineStatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineStatusMessage.swift; sourceTree = "<group>"; };
+		28A100062F700100008A0E70 /* WagerChips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagerChips.swift; sourceTree = "<group>"; };
 		27F653BD2F4FE54C00F1E977 /* DoubleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +120,8 @@
 		2775461A2F4FE83F008A0E70 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				28A100012F700100008A0E70 /* BrandPalette.swift */,
+				28A100022F700100008A0E70 /* BrandedActionButtonStyle.swift */,
 				277546192F4FE83F008A0E70 /* Typography.swift */,
 			);
 			path = Design;
@@ -279,7 +293,11 @@
 		2775463D2F4FE83F008A0E70 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				28A100032F700100008A0E70 /* CardContainer.swift */,
+				28A100052F700100008A0E70 /* InlineStatusMessage.swift */,
+				28A100042F700100008A0E70 /* RemainingMinutesHero.swift */,
 				27E100032F600400008A0E70 /* RemainingMinutesCard.swift */,
+				28A100062F700100008A0E70 /* WagerChips.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -480,6 +498,12 @@
 				27F100012F600400008A0E70 /* HomeView.swift in Sources */,
 				27F100022F600400008A0E70 /* HomeViewModel.swift in Sources */,
 				27F100032F600400008A0E70 /* RemainingMinutesCard.swift in Sources */,
+				28B100012F700100008A0E70 /* BrandPalette.swift in Sources */,
+				28B100022F700100008A0E70 /* BrandedActionButtonStyle.swift in Sources */,
+				28B100032F700100008A0E70 /* CardContainer.swift in Sources */,
+				28B100042F700100008A0E70 /* RemainingMinutesHero.swift in Sources */,
+				28B100052F700100008A0E70 /* InlineStatusMessage.swift in Sources */,
+				28B100062F700100008A0E70 /* WagerChips.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

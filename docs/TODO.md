@@ -82,11 +82,12 @@
   - **Acceptance criteria:** At `remainingMinutes == 0`, tap does not change state; shake + inline message appear; shields remain applied; control styles and copy match `Docs/styling.md`.
   - **Touch points:** `Features/Home/Components/LockToggleButton.swift`, `Features/Home/Components/InlineStatusMessage.swift`, `Features/Home/HomeViewModel.swift`.
 
-- [ ] **Implement shared styled UI primitives from styling spec**
+- [x] **Implement shared styled UI primitives from styling spec**
   - **Objective:** Build reusable UI primitives so Home and Games share consistent visual language.
   - **Inputs:** `Docs/styling.md` (Components, Typography, Spacing and Layout, Shapes), `Core/Design/Typography.swift`.
   - **Acceptance criteria:** Shared components exist for hero metric, branded lock button, card container, wager chips, and inline status message; screens consume these instead of ad-hoc styling.
   - **Touch points:** `Features/Home/Components/*`, `Features/Games/*`, `Core/Design/Typography.swift`.
+  - **Done:** Added `CardContainer`, `RemainingMinutesHero`, `InlineStatusMessage`, `WagerChip`/`WagerChips`, and `BrandedActionButtonStyle`; `RemainingMinutesCard` now uses shared primitives instead of inlined card/hero styling.
 
 ## Phase 5 - Game Loop Implementation
 

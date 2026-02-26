@@ -11,41 +11,25 @@ struct RemainingMinutesCard: View {
     let bonusMinutesFromGames: Int
     let usageMinutesToday: Int
 
-    // MARK: - Brand Colors
-
-    private let brandInk   = Color(red: 0x2E / 255, green: 0x29 / 255, blue: 0x4E / 255)  // #2E294E
-    private let brandAccent = Color(red: 0xD9 / 255, green: 0x03 / 255, blue: 0x68 / 255)  // #D90368
-
     var body: some View {
-        VStack(spacing: 12) {
+        CardContainer(useWarmTint: true) {
+            VStack(spacing: 12) {
 
-            // MARK: Hero Metric
-            Text("\(remainingMinutes)")
-                .font(Typography.Token.heroMetric())
-                .foregroundStyle(remainingMinutes > 0 ? brandInk : Color.secondary)
-                .opacity(remainingMinutes > 0 ? 1.0 : 0.45)
-                .contentTransition(.numericText(value: Double(remainingMinutes)))
-                .animation(.easeInOut(duration: 0.25), value: remainingMinutes)
-                .accessibilityLabel("Remaining minutes: \(remainingMinutes)")
+                // MARK: Hero Metric
+                RemainingMinutesHero(remainingMinutes: remainingMinutes)
 
-            Text("minutes remaining")
-                .font(Typography.Token.secondary())
-                .foregroundStyle(.secondary)
+                Divider()
+                    .padding(.horizontal, 16)
 
-            Divider()
-                .padding(.horizontal, 16)
-
-            // MARK: Secondary Breakdown
-            HStack(spacing: 24) {
-                breakdownItem(label: "Allowance", value: "\(dailyAllowanceMinutes)")
-                breakdownItem(label: "Bonus", value: bonusString)
-                breakdownItem(label: "Used", value: "\(usageMinutesToday)")
+                // MARK: Secondary Breakdown
+                HStack(spacing: 24) {
+                    breakdownItem(label: "Allowance", value: "\(dailyAllowanceMinutes)")
+                    breakdownItem(label: "Bonus", value: bonusString)
+                    breakdownItem(label: "Used", value: "\(usageMinutesToday)")
+                }
+                .padding(.bottom, 4)
             }
-            .padding(.bottom, 4)
         }
-        .padding(16)
-        .background(Color(.secondarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .accessibilityElement(children: .contain)
     }
 

@@ -1,0 +1,52 @@
+# iOS Simulator Build Guardrails (DoubleTime)
+
+Use this file as a required checklist for all AI-assisted changes in this repository.
+
+## Scope
+
+These rules apply to any change that can affect Xcode simulator builds.
+
+## Mandatory Rules
+
+1. Keep project structure aligned with `Docs/architecture.md`.
+2. Do not introduce new dependencies unless explicitly requested.
+3. Do not modify behavior outside the requested scope.
+4. Do not silently revert unrelated user changes.
+
+## Xcode Project Membership Rule (Critical)
+
+When adding, moving, or renaming Swift files, always update `DoubleTime.xcodeproj/project.pbxproj` so the app target can compile.
+
+For each affected Swift file, ensure all of the following exist:
+
+- `PBXFileReference` entry
+- `PBXBuildFile` entry
+- Inclusion in the correct `PBXGroup` path
+- Inclusion in target `PBXSourcesBuildPhase` (`Sources`)
+
+If any one of these is missing, the file is considered not integrated.
+
+## Resource Membership Rule
+
+When adding bundled resources (fonts, assets, sounds), ensure:
+
+- Files exist under `Resources/` per architecture docs.
+- Resource file references are present in `project.pbxproj`.
+- Resources are included in `PBXResourcesBuildPhase`.
+
+## Pre-Completion Verification
+
+Before marking a task done:
+
+1. Confirm all new/moved Swift files are present in `project.pbxproj`.
+2. Confirm all new/moved resources are present in `project.pbxproj` resources phase.
+3. Check for unresolved symbol risks caused by missing target membership.
+4. Run lint checks for edited files when available.
+
+## Failure Handling
+
+If simulator build fails with "Cannot find '<Symbol>' in scope" after adding files:
+
+1. Check `project.pbxproj` for missing `PBXFileReference`/`PBXBuildFile` entries.
+2. Check `PBXSourcesBuildPhase` membership.
+3. Fix `project.pbxproj` first, then ask for clean rebuild (`Shift+Cmd+K`, then `Cmd+R`).
