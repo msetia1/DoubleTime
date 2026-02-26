@@ -36,6 +36,23 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 16)
 
+                // MARK: Lock Toggle
+                LockToggleButton(
+                    isLocked: resolvedViewModel.isLocked,
+                    unlockAllowed: resolvedViewModel.unlockAllowed,
+                    onToggle: { await resolvedViewModel.toggleLock() },
+                    shakeToggle: resolvedViewModel.shakeToggle
+                )
+                .padding(.horizontal, 16)
+
+                InlineStatusMessage(
+                    isVisible: Binding(
+                        get: { resolvedViewModel.showBlockedMessage },
+                        set: { resolvedViewModel.showBlockedMessage = $0 }
+                    ),
+                    text: "0 minutes remaining"
+                )
+
                 // MARK: Last Refresh
                 if let lastRefresh = resolvedViewModel.lastRefreshDate {
                     Text("Updated \(lastRefresh, format: .relative(presentation: .named))")

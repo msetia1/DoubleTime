@@ -70,13 +70,13 @@
 
 ## Phase 4 - Home UX and Controls
 
-- [ ] **Build Home remaining-minutes surface**
+- [x] **Build Home remaining-minutes surface**
   - **Objective:** Ship Home UI that emphasizes a single primary value (`remainingMinutes`) with optional secondary breakdown.
   - **Inputs:** `Docs/spec.md` (Remaining time model, UX and controls), `Docs/styling.md`, `Core/Design/Typography.swift`.
   - **Acceptance criteria:** Home shows one prominent remaining-minutes number; breakdowns are visually secondary; typography and spacing follow `Docs/styling.md` and `Typography.swift`.
   - **Touch points:** `Features/Home/HomeView.swift`, `Features/Home/Components/RemainingMinutesCard.swift`.
 
-- [ ] **Build single Lock/Unlock control with zero-minute feedback**
+- [x] **Build single Lock/Unlock control with zero-minute feedback**
   - **Objective:** Implement one lock toggle control with disabled/grey state, shake, and inline “0 minutes remaining” fade message when unlock is disallowed.
   - **Inputs:** `Docs/spec.md` (UX and controls), `Docs/data_flow.md` (Sequence 4), `Docs/styling.md` (Lock/Unlock Control Styling, Motion and Animation, Copy and Tone).
   - **Acceptance criteria:** At `remainingMinutes == 0`, tap does not change state; shake + inline message appear; shields remain applied; control styles and copy match `Docs/styling.md`.

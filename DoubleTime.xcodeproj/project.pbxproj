@@ -49,6 +49,7 @@
 		28B100042F700100008A0E70 /* RemainingMinutesHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100042F700100008A0E70 /* RemainingMinutesHero.swift */; };
 		28B100052F700100008A0E70 /* InlineStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100052F700100008A0E70 /* InlineStatusMessage.swift */; };
 		28B100062F700100008A0E70 /* WagerChips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100062F700100008A0E70 /* WagerChips.swift */; };
+		27F200012F700500008A0E70 /* LockToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E200012F700500008A0E70 /* LockToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		28A100042F700100008A0E70 /* RemainingMinutesHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingMinutesHero.swift; sourceTree = "<group>"; };
 		28A100052F700100008A0E70 /* InlineStatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineStatusMessage.swift; sourceTree = "<group>"; };
 		28A100062F700100008A0E70 /* WagerChips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagerChips.swift; sourceTree = "<group>"; };
+		27E200012F700500008A0E70 /* LockToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockToggleButton.swift; sourceTree = "<group>"; };
 		27F653BD2F4FE54C00F1E977 /* DoubleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -295,6 +297,7 @@
 			children = (
 				28A100032F700100008A0E70 /* CardContainer.swift */,
 				28A100052F700100008A0E70 /* InlineStatusMessage.swift */,
+				27E200012F700500008A0E70 /* LockToggleButton.swift */,
 				28A100042F700100008A0E70 /* RemainingMinutesHero.swift */,
 				27E100032F600400008A0E70 /* RemainingMinutesCard.swift */,
 				28A100062F700100008A0E70 /* WagerChips.swift */,
@@ -504,6 +507,7 @@
 				28B100042F700100008A0E70 /* RemainingMinutesHero.swift in Sources */,
 				28B100052F700100008A0E70 /* InlineStatusMessage.swift in Sources */,
 				28B100062F700100008A0E70 /* WagerChips.swift in Sources */,
+				27F200012F700500008A0E70 /* LockToggleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
