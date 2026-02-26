@@ -11,9 +11,11 @@ struct CardContainer<Content: View>: View {
 
     var body: some View {
         content()
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(16)
             .background(backgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private var backgroundColor: Color {

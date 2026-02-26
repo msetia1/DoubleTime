@@ -12,24 +12,24 @@ struct RemainingMinutesCard: View {
     let usageMinutesToday: Int
 
     var body: some View {
-        CardContainer(useWarmTint: true) {
-            VStack(spacing: 12) {
+        CardContainer {
+            HStack(alignment: .top, spacing: 16) {
 
                 // MARK: Hero Metric
                 RemainingMinutesHero(remainingMinutes: remainingMinutes)
-
-                Divider()
-                    .padding(.horizontal, 16)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
                 // MARK: Secondary Breakdown
-                HStack(spacing: 24) {
-                    breakdownItem(label: "Allowance", value: "\(dailyAllowanceMinutes)")
-                    breakdownItem(label: "Bonus", value: bonusString)
-                    breakdownItem(label: "Used", value: "\(usageMinutesToday)")
+                VStack(alignment: .trailing, spacing: 10) {
+                    breakdownRow(label: "Allowance", value: "\(dailyAllowanceMinutes)")
+                    breakdownRow(label: "Bonus", value: bonusString)
+                    breakdownRow(label: "Used", value: "\(usageMinutesToday)")
                 }
-                .padding(.bottom, 4)
+                .frame(maxWidth: .infinity, alignment: .trailing)
             }
+            .padding(.vertical, 2)
         }
+        .frame(maxWidth: .infinity)
         .accessibilityElement(children: .contain)
     }
 
@@ -42,14 +42,14 @@ struct RemainingMinutesCard: View {
         return "\(bonusMinutesFromGames)"
     }
 
-    private func breakdownItem(label: String, value: String) -> some View {
-        VStack(spacing: 4) {
-            Text(value)
-                .font(Typography.Token.controlLabel())
-                .foregroundStyle(.primary)
+    private func breakdownRow(label: String, value: String) -> some View {
+        HStack(spacing: 8) {
             Text(label)
                 .font(Typography.Token.caption())
                 .foregroundStyle(.secondary)
+            Text(value)
+                .font(Typography.Token.controlLabel())
+                .foregroundStyle(.primary)
         }
         .accessibilityElement(children: .combine)
     }

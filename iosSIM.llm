@@ -12,6 +12,15 @@ These rules apply to any change that can affect Xcode simulator builds.
 2. Do not introduce new dependencies unless explicitly requested.
 3. Do not modify behavior outside the requested scope.
 4. Do not silently revert unrelated user changes.
+5. Reuse shared UI primitives from `Docs/styling.md` instead of creating one-off styling in feature screens.
+
+Shared UI primitives to prefer:
+
+- `CardContainer`
+- `RemainingMinutesHero`
+- `InlineStatusMessage`
+- `WagerChips` / `WagerChip`
+- `BrandedActionButtonStyle`
 
 ## Xcode Project Membership Rule (Critical)
 

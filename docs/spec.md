@@ -26,6 +26,7 @@ External dependencies are avoided unless they are widely adopted and exceptional
   - Preferred over UIKit for all screens and animations
   - Visual, typography, motion, copy, and accessibility standards must follow `Docs/styling.md`
   - Typography must use shared tokens from `Core/Design/Typography.swift` (no ad-hoc fonts)
+  - Shared UI styling should be composed from reusable primitives (`CardContainer`, `RemainingMinutesHero`, `InlineStatusMessage`, `WagerChips`, `BrandedActionButtonStyle`) rather than recreated per screen
 
 ## State & Concurrency
 

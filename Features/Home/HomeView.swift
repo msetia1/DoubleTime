@@ -8,6 +8,7 @@ struct HomeView: View {
 
     @Environment(AppModel.self) private var appModel
     @State private var viewModel: HomeViewModel?
+    @State private var selectedWagerPreset: Int?
 
     var body: some View {
         ScrollView {
@@ -23,6 +24,18 @@ struct HomeView: View {
                 .padding(.horizontal, 16)
                 .padding(.top, 24)
 
+                // MARK: Shared Wager Chips (used by future game screens)
+                CardContainer {
+                    WagerChips(
+                        maxWagerMinutes: max(0, resolvedViewModel.remainingMinutes),
+                        currentRemainingMinutes: resolvedViewModel.remainingMinutes,
+                        selectedMinutes: selectedWagerPreset
+                    ) { selected in
+                        selectedWagerPreset = selected
+                    }
+                }
+                .padding(.horizontal, 16)
+
                 // MARK: Last Refresh
                 if let lastRefresh = resolvedViewModel.lastRefreshDate {
                     Text("Updated \(lastRefresh, format: .relative(presentation: .named))")
@@ -32,6 +45,7 @@ struct HomeView: View {
 
                 Spacer(minLength: 0)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .refreshable {
             await resolvedViewModel.refresh()
@@ -39,6 +53,9 @@ struct HomeView: View {
         .onAppear {
             if viewModel == nil {
                 viewModel = HomeViewModel(appModel: appModel)
+            }
+            if selectedWagerPreset == nil {
+                selectedWagerPreset = max(1, min(5, resolvedViewModel.remainingMinutes))
             }
         }
         .navigationTitle("Home")

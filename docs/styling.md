@@ -1,7 +1,7 @@
 # Styling
 
-This document defines a minimal styling system so all screens feel cohesive.  
-It pairs with `Typography.swift` for font consistency and with reference screenshots in `/ui-similar/screens`.
+This document defines a minimal styling system so all screens feel cohesive.
+It pairs with `Core/Design/Typography.swift` for font consistency and with reference screenshots in `Docs/ui-similar/screens`.
 
 Goals:
 
@@ -166,6 +166,22 @@ Components that carry the brand and enforce consistency:
 - CardContainer (Home, History)
 - WagerChips (1, 5, 10)
 - InlineStatusMessage (fade in/out)
+
+Implementation mapping (required):
+
+- `RemainingMinutesHero` → `Features/Home/Components/RemainingMinutesHero.swift`
+- `CardContainer` → `Features/Home/Components/CardContainer.swift`
+- `WagerChips` and `WagerChip` → `Features/Home/Components/WagerChips.swift`
+- `InlineStatusMessage` → `Features/Home/Components/InlineStatusMessage.swift`
+- Branded action button style (`BrandLockButton` styling contract) → `Core/Design/BrandedActionButtonStyle.swift`
+- Brand colors used by shared components → `Core/Design/BrandPalette.swift`
+
+LLM rules:
+
+- Reuse these shared components/styles when building or updating UI.
+- Do not recreate card/button/chip/status styles inline in feature screens.
+- If behavior changes, update the shared primitive first, then consumers.
+- Keep typography via `Core/Design/Typography.swift`; no ad-hoc font declarations.
 
 Cards:
 

@@ -371,3 +371,10 @@ Log all events affecting lock state or remainingMinutes.
 - Enforce one-way data flow:
   UI → ViewModel → Domain → Models → UI
 - Treat minutes as Int everywhere; always floor when converting.
+- For UI, prefer shared primitives over per-screen styling:
+  - `CardContainer`
+  - `RemainingMinutesHero`
+  - `InlineStatusMessage`
+  - `WagerChips` / `WagerChip`
+  - `BrandedActionButtonStyle`
+- If a screen needs card/chip/button/status styling, compose with shared primitives first and only add local wrappers when necessary.
