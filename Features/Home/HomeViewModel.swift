@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Thin orchestration layer for the Home screen.
 ///
@@ -34,6 +35,14 @@ final class HomeViewModel {
 
     var lastRefreshDate: Date? { appModel.usage.lastUsageRefreshDate }
 
+    // MARK: - UI State
+
+    /// Controls InlineStatusMessage visibility when unlock is blocked.
+    var showBlockedMessage: Bool = false
+
+    /// Toggled to trigger the shake animation on the lock button.
+    var shakeToggle: Bool = false
+
     // MARK: - Actions
 
     /// Pull-to-refresh trigger (Sequence 3: Manual Pull-to-Refresh on Home).
@@ -41,9 +50,36 @@ final class HomeViewModel {
         await appModel.refreshUsageAndRecomputeRemaining()
     }
 
-    /// Lock toggle (delegates to AppModel). Returns whether toggle succeeded.
+    /// Lock toggle with haptic feedback.
+    ///
+    /// When unlock is blocked (0 minutes), fires shake + inline message
+    /// instead of toggling state.
     @discardableResult
     func toggleLock() async -> Bool {
-        await appModel.toggleLock()
+        if !unlockAllowed && isLocked {
+            // Blocked — fire UI feedback only
+            shakeToggle.toggle()
+            showBlockedMessage = true
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+            return false
+        }
+
+        let wasLocked = isLocked
+        let success = await appModel.toggleLock()
+
+        if success {
+            if wasLocked {
+                // Unlocked successfully
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.success)
+            } else {
+                // Locked successfully
+                let generator = UIImpactFeedbackGenerator(style: .light)
+                generator.impactOccurred()
+            }
+        }
+
+        return success
     }
 }
