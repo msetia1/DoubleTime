@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		277546542F4FE83F008A0E70 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546192F4FE83F008A0E70 /* Typography.swift */; };
 		277546552F4FE83F008A0E70 /* ScreenTimeWagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277546172F4FE83F008A0E70 /* ScreenTimeWagerApp.swift */; };
+		27B000012F500000008A0E70 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000012F500000008A0E70 /* GameType.swift */; };
+		27B000022F500000008A0E70 /* TimeBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000022F500000008A0E70 /* TimeBudget.swift */; };
+		27B000032F500000008A0E70 /* GameTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000032F500000008A0E70 /* GameTransaction.swift */; };
+		27B000042F500000008A0E70 /* AppSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000042F500000008A0E70 /* AppSelection.swift */; };
+		27B000052F500000008A0E70 /* MinutesRounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000052F500000008A0E70 /* MinutesRounding.swift */; };
+		27B000062F500000008A0E70 /* DateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000062F500000008A0E70 /* DateKey.swift */; };
+		27B000072F500000008A0E70 /* RNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000072F500000008A0E70 /* RNG.swift */; };
+		27B000082F500000008A0E70 /* RemainingMinutesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000082F500000008A0E70 /* RemainingMinutesCalculator.swift */; };
+		27B000092F500000008A0E70 /* WagerPreviewCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000092F500000008A0E70 /* WagerPreviewCalculator.swift */; };
+		27B0000A2F500000008A0E70 /* TimeBudgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0000A2F500000008A0E70 /* TimeBudgetModel.swift */; };
+		27B0000B2F500000008A0E70 /* UsageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0000B2F500000008A0E70 /* UsageModel.swift */; };
+		27B0000C2F500000008A0E70 /* LockStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0000C2F500000008A0E70 /* LockStateModel.swift */; };
+		27B0000D2F500000008A0E70 /* TransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0000D2F500000008A0E70 /* TransactionsModel.swift */; };
+		27B0000E2F500000008A0E70 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0000E2F500000008A0E70 /* AppModel.swift */; };
+		27B0000F2F500000008A0E70 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0000F2F500000008A0E70 /* KeyValueStore.swift */; };
+		27B000102F500000008A0E70 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000102F500000008A0E70 /* UserDefaultsStore.swift */; };
+		27B000112F500000008A0E70 /* CodableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A000112F500000008A0E70 /* CodableStore.swift */; };
 		277546572F4FE83F008A0E70 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464C2F4FE83F008A0E70 /* Outfit-SemiBold.ttf */; };
 		277546582F4FE83F008A0E70 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2775464B2F4FE83F008A0E70 /* Outfit-Regular.ttf */; };
 		2775465A2F4FE83F008A0E70 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277546452F4FE83F008A0E70 /* Outfit-Black.ttf */; };
@@ -34,6 +51,23 @@
 		2775464C2F4FE83F008A0E70 /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		2775464D2F4FE83F008A0E70 /* Outfit-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Thin.ttf"; sourceTree = "<group>"; };
 		277546512F4FE83F008A0E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27A000012F500000008A0E70 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		27A000022F500000008A0E70 /* TimeBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBudget.swift; sourceTree = "<group>"; };
+		27A000032F500000008A0E70 /* GameTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTransaction.swift; sourceTree = "<group>"; };
+		27A000042F500000008A0E70 /* AppSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelection.swift; sourceTree = "<group>"; };
+		27A000052F500000008A0E70 /* MinutesRounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesRounding.swift; sourceTree = "<group>"; };
+		27A000062F500000008A0E70 /* DateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateKey.swift; sourceTree = "<group>"; };
+		27A000072F500000008A0E70 /* RNG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNG.swift; sourceTree = "<group>"; };
+		27A000082F500000008A0E70 /* RemainingMinutesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingMinutesCalculator.swift; sourceTree = "<group>"; };
+		27A000092F500000008A0E70 /* WagerPreviewCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagerPreviewCalculator.swift; sourceTree = "<group>"; };
+		27A0000A2F500000008A0E70 /* TimeBudgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBudgetModel.swift; sourceTree = "<group>"; };
+		27A0000B2F500000008A0E70 /* UsageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageModel.swift; sourceTree = "<group>"; };
+		27A0000C2F500000008A0E70 /* LockStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockStateModel.swift; sourceTree = "<group>"; };
+		27A0000D2F500000008A0E70 /* TransactionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsModel.swift; sourceTree = "<group>"; };
+		27A0000E2F500000008A0E70 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		27A0000F2F500000008A0E70 /* KeyValueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
+		27A000102F500000008A0E70 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		27A000112F500000008A0E70 /* CodableStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStore.swift; sourceTree = "<group>"; };
 		27F653BD2F4FE54C00F1E977 /* DoubleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +101,8 @@
 		2775461C2F4FE83F008A0E70 /* Calculators */ = {
 			isa = PBXGroup;
 			children = (
+				27A000082F500000008A0E70 /* RemainingMinutesCalculator.swift */,
+				27A000092F500000008A0E70 /* WagerPreviewCalculator.swift */,
 			);
 			path = Calculators;
 			sourceTree = "<group>";
@@ -81,6 +117,10 @@
 		277546202F4FE83F008A0E70 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				27A000042F500000008A0E70 /* AppSelection.swift */,
+				27A000032F500000008A0E70 /* GameTransaction.swift */,
+				27A000012F500000008A0E70 /* GameType.swift */,
+				27A000022F500000008A0E70 /* TimeBudget.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -88,6 +128,9 @@
 		277546222F4FE83F008A0E70 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				27A000062F500000008A0E70 /* DateKey.swift */,
+				27A000052F500000008A0E70 /* MinutesRounding.swift */,
+				27A000072F500000008A0E70 /* RNG.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -120,6 +163,9 @@
 		277546292F4FE83F008A0E70 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				27A000112F500000008A0E70 /* CodableStore.swift */,
+				27A0000F2F500000008A0E70 /* KeyValueStore.swift */,
+				27A000102F500000008A0E70 /* UserDefaultsStore.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -145,6 +191,11 @@
 		2775462E2F4FE83F008A0E70 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				27A0000E2F500000008A0E70 /* AppModel.swift */,
+				27A0000C2F500000008A0E70 /* LockStateModel.swift */,
+				27A0000A2F500000008A0E70 /* TimeBudgetModel.swift */,
+				27A0000D2F500000008A0E70 /* TransactionsModel.swift */,
+				27A0000B2F500000008A0E70 /* UsageModel.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -382,6 +433,23 @@
 			files = (
 				277546542F4FE83F008A0E70 /* Typography.swift in Sources */,
 				277546552F4FE83F008A0E70 /* ScreenTimeWagerApp.swift in Sources */,
+				27B000012F500000008A0E70 /* GameType.swift in Sources */,
+				27B000022F500000008A0E70 /* TimeBudget.swift in Sources */,
+				27B000032F500000008A0E70 /* GameTransaction.swift in Sources */,
+				27B000042F500000008A0E70 /* AppSelection.swift in Sources */,
+				27B000052F500000008A0E70 /* MinutesRounding.swift in Sources */,
+				27B000062F500000008A0E70 /* DateKey.swift in Sources */,
+				27B000072F500000008A0E70 /* RNG.swift in Sources */,
+				27B000082F500000008A0E70 /* RemainingMinutesCalculator.swift in Sources */,
+				27B000092F500000008A0E70 /* WagerPreviewCalculator.swift in Sources */,
+				27B0000A2F500000008A0E70 /* TimeBudgetModel.swift in Sources */,
+				27B0000B2F500000008A0E70 /* UsageModel.swift in Sources */,
+				27B0000C2F500000008A0E70 /* LockStateModel.swift in Sources */,
+				27B0000D2F500000008A0E70 /* TransactionsModel.swift in Sources */,
+				27B0000E2F500000008A0E70 /* AppModel.swift in Sources */,
+				27B0000F2F500000008A0E70 /* KeyValueStore.swift in Sources */,
+				27B000102F500000008A0E70 /* UserDefaultsStore.swift in Sources */,
+				27B000112F500000008A0E70 /* CodableStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

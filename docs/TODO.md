@@ -28,19 +28,19 @@
 
 ## Phase 2 - Core Domain and State
 
-- [ ] **Implement core time-budget models and derived calculator**
+- [x] **Implement core time-budget models and derived calculator**
   - **Objective:** Implement data models and one canonical calculator for `remainingMinutes` using the agreed formula and floor/clamp behavior.
   - **Inputs:** `Docs/spec.md` (Remaining time model), `Docs/architecture.md` (Remaining Minutes Calculation), `Docs/data_flow.md` (Core Data and Derived Values).
   - **Acceptance criteria:** Calculator returns `max(0, (dailyAllowanceMinutes + bonusMinutesFromGames) - floor(usageMinutesToday))`; no in-app countdown code exists.
   - **Touch points:** `Core/Domain/Models/TimeBudget.swift`, `Core/Domain/Calculators/RemainingMinutesCalculator.swift`, `Core/Domain/Utilities/MinutesRounding.swift`.
 
-- [ ] **Implement global observable state models**
+- [x] **Implement global observable state models**
   - **Objective:** Add `@Observable` global models with clear ownership for budget, usage, lock intent, and transactions.
   - **Inputs:** `Docs/architecture.md` (State Management), `Docs/data_flow.md` (Core Data and Derived Values).
   - **Acceptance criteria:** `TimeBudgetModel`, `UsageModel`, `LockStateModel`, and `TransactionsModel` compile; `remainingMinutes` is derived, not stored.
   - **Touch points:** `Core/State/TimeBudgetModel.swift`, `Core/State/UsageModel.swift`, `Core/State/LockStateModel.swift`, `Core/State/TransactionsModel.swift`.
 
-- [ ] **Implement persistence schema and load/save paths**
+- [x] **Implement persistence schema and load/save paths**
   - **Objective:** Persist only agreed state (`dailyAllowanceMinutes`, `bonusMinutesFromGames`, `userWantsUnlocked`, app selection, transactions, pending wager).
   - **Inputs:** `Docs/architecture.md` (Persistence), `Docs/data_flow.md` (Sequences 1, 9, 12), `Docs/spec.md` (Data Persistence).
   - **Acceptance criteria:** App relaunch restores persisted values; `remainingMinutes` is recomputed on launch; pending wager forfeit is applied once.
