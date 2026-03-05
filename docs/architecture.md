@@ -1,3 +1,10 @@
+---
+title: "Architecture"
+category: "core"
+description: "Layer boundaries, state ownership, folder structure, naming conventions, and service responsibilities."
+last_updated: "2026-02-26"
+---
+
 # Architecture - Folder Structure, naming conventions, state management
 
 This document defines how the system is structured (layers, state ownership, boundaries) for the Screen Time gambling blocker project. Product behavior: spec.md. Event sequences: data_flow.md. Optimized for Apple-native frameworks, AI-assisted implementation, and modern SwiftUI.

@@ -1,3 +1,10 @@
+---
+title: "SwiftUI API Reference"
+category: "llms"
+description: "Comprehensive SwiftUI API reference formatted for LLM consumption. Covers App, View, modifiers, layout, data flow, accessibility, and framework integration."
+last_updated: "2026-02-23"
+---
+
 <!--
 Downloaded via https://llm.codes by @steipete on February 18, 2026 at 11:08 AM
 Source URL: https://developer.apple.com/documentation/SwiftUI

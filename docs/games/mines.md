@@ -1,3 +1,10 @@
+---
+title: "Mines"
+category: "games"
+description: "Mines rules, 5x5 grid, mine count selection, fixed multiplier table, UX flow, and reveal mechanics."
+last_updated: "2026-02-26"
+---
+
 # Mines — v1 Rules Contract
 
 Classic Mines on a 5×5 grid. Reveal tiles one by one; each safe reveal increases a fixed multiplier. Hit a mine and lose the wager. Cash out anytime after at least one safe reveal.

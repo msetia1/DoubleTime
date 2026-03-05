@@ -1,3 +1,10 @@
+---
+title: "Crash"
+category: "games"
+description: "Crash game rules, multiplier growth curve, crash point generation, cashout mechanics, and house edge."
+last_updated: "2026-02-26"
+---
+
 # Crash Overview
 
 A rising multiplier that can crash at any moment. Cash out before it crashes to win; wait too long and lose your wager.

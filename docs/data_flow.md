@@ -1,3 +1,10 @@
+---
+title: "Data Flow"
+category: "core"
+description: "Event-driven sequences for launch, refresh, lock/unlock, game resolve, and day reset."
+last_updated: "2026-02-25"
+---
+
 # Data Flow
 
 When and why state changes (event-driven sequences). Product rules: spec.md. Structure: architecture.md.

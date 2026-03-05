@@ -1,3 +1,10 @@
+---
+title: "Markdown Style Rules"
+category: "llms"
+description: "Hard constraints for markdown formatting in all docs: headings, lists, paragraphs, code blocks, emphasis, and prohibited patterns."
+last_updated: "2026-02-25"
+---
+
 # Markdown Style Rules (Hard Constraints)
 
 These rules MUST be followed exactly.

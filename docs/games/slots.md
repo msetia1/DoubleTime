@@ -1,3 +1,10 @@
+---
+title: "Slots"
+category: "games"
+description: "Slots rules, symbol payouts, weighted outcome table, 3-reel mechanics, and RTP."
+last_updated: "2026-02-26"
+---
+
 # Slots Overview
 
 Spin three reels for a chance at matching symbols. Instant resolution with no player decisions after the spin.

@@ -1,3 +1,10 @@
+---
+title: "TODO Tracker"
+category: "core"
+description: "Phased implementation tracker with objectives, acceptance criteria, and file touch points."
+last_updated: "2026-02-27"
+---
+
 # DoubleTime TODO
 
 ## Map of /Docs

@@ -1,3 +1,10 @@
+---
+title: "Styling"
+category: "core"
+description: "Brand palette, typography tokens, spacing scale, component styling, motion, copy tone, and accessibility rules."
+last_updated: "2026-02-26"
+---
+
 # Styling
 
 This document defines a minimal styling system so all screens feel cohesive.

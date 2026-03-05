@@ -1,3 +1,10 @@
+---
+title: "UI Design References"
+category: "ui-reference"
+description: "Screenshot references for UI design inspiration from similar apps (Opal, Cash App)."
+last_updated: "2026-02-25"
+---
+
 # UI Designs
 
 Create UI similar to these mobile applications

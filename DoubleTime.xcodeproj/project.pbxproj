@@ -43,13 +43,13 @@
 		27F100012F600400008A0E70 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E100012F600400008A0E70 /* HomeView.swift */; };
 		27F100022F600400008A0E70 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E100022F600400008A0E70 /* HomeViewModel.swift */; };
 		27F100032F600400008A0E70 /* RemainingMinutesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E100032F600400008A0E70 /* RemainingMinutesCard.swift */; };
+		27F200012F700500008A0E70 /* LockToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E200012F700500008A0E70 /* LockToggleButton.swift */; };
 		28B100012F700100008A0E70 /* BrandPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100012F700100008A0E70 /* BrandPalette.swift */; };
 		28B100022F700100008A0E70 /* BrandedActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100022F700100008A0E70 /* BrandedActionButtonStyle.swift */; };
 		28B100032F700100008A0E70 /* CardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100032F700100008A0E70 /* CardContainer.swift */; };
 		28B100042F700100008A0E70 /* RemainingMinutesHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100042F700100008A0E70 /* RemainingMinutesHero.swift */; };
 		28B100052F700100008A0E70 /* InlineStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100052F700100008A0E70 /* InlineStatusMessage.swift */; };
 		28B100062F700100008A0E70 /* WagerChips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A100062F700100008A0E70 /* WagerChips.swift */; };
-		27F200012F700500008A0E70 /* LockToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E200012F700500008A0E70 /* LockToggleButton.swift */; };
 		29B300012F800100008A0E70 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300012F800100008A0E70 /* AppRootView.swift */; };
 		29B300022F800100008A0E70 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300022F800100008A0E70 /* AppRouter.swift */; };
 		29B300032F800100008A0E70 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A300032F800100008A0E70 /* GameEngine.swift */; };
@@ -118,13 +118,14 @@
 		27E100012F600400008A0E70 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		27E100022F600400008A0E70 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		27E100032F600400008A0E70 /* RemainingMinutesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingMinutesCard.swift; sourceTree = "<group>"; };
+		27E200012F700500008A0E70 /* LockToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockToggleButton.swift; sourceTree = "<group>"; };
+		27F653BD2F4FE54C00F1E977 /* DoubleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A100012F700100008A0E70 /* BrandPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandPalette.swift; sourceTree = "<group>"; };
 		28A100022F700100008A0E70 /* BrandedActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandedActionButtonStyle.swift; sourceTree = "<group>"; };
 		28A100032F700100008A0E70 /* CardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainer.swift; sourceTree = "<group>"; };
 		28A100042F700100008A0E70 /* RemainingMinutesHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingMinutesHero.swift; sourceTree = "<group>"; };
 		28A100052F700100008A0E70 /* InlineStatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineStatusMessage.swift; sourceTree = "<group>"; };
 		28A100062F700100008A0E70 /* WagerChips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagerChips.swift; sourceTree = "<group>"; };
-		27E200012F700500008A0E70 /* LockToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockToggleButton.swift; sourceTree = "<group>"; };
 		29A300012F800100008A0E70 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
 		29A300022F800100008A0E70 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		29A300032F800100008A0E70 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		29A3001A2F800100008A0E70 /* PlayContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayContainerView.swift; sourceTree = "<group>"; };
 		29A3001B2F800100008A0E70 /* GameSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSessionModel.swift; sourceTree = "<group>"; };
 		29A3001C2F800100008A0E70 /* WagerModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagerModalView.swift; sourceTree = "<group>"; };
-		27F653BD2F4FE54C00F1E977 /* DoubleTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,14 +349,6 @@
 			path = Slots;
 			sourceTree = "<group>";
 		};
-		29C3001D2F800100008A0E70 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				29A3001C2F800100008A0E70 /* WagerModalView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		277546392F4FE83F008A0E70 /* Games */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +478,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		29C3001D2F800100008A0E70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				29A3001C2F800100008A0E70 /* WagerModalView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -516,7 +516,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					27F653BC2F4FE54C00F1E977 = {
 						CreatedOnToolsVersion = 16.1;
@@ -669,6 +669,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4CC6N69JLG;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -692,6 +693,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -732,6 +734,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4CC6N69JLG;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -748,6 +751,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -759,9 +763,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DoubleTime.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4CC6N69JLG;
+				DEVELOPMENT_TEAM = 6VR4DV3X5S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -776,6 +781,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.DoubleTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -788,9 +794,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DoubleTime.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4CC6N69JLG;
+				DEVELOPMENT_TEAM = 6VR4DV3X5S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -805,6 +812,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Personal.DoubleTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

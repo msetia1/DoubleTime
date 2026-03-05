@@ -1,3 +1,10 @@
+---
+title: "Plinko"
+category: "games"
+description: "Plinko rules, risk levels (low/medium/high), multiplier tables, binomial distribution, and bucket probabilities."
+last_updated: "2026-02-26"
+---
+
 # Plinko Overview
 
 A ball drops through a pyramid of pins and lands in a multiplier bucket. The player controls risk level, which determines the spread of multipliers.

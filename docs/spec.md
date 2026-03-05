@@ -1,3 +1,10 @@
+---
+title: "Product Spec"
+category: "core"
+description: "Product rules, tech stack, core logic, wagering model, locking policy, and UX controls."
+last_updated: "2026-02-26"
+---
+
 # Goal + Tech Stack + Core Logic
 
 Product behavior and rules. System structure: architecture.md. Event sequences: data_flow.md.
