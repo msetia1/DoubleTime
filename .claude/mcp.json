@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "doubletime-style": {
+      "command": "python3",
+      "args": ["mcp-style-server/server.py"],
+      "env": { "PROJECT_ROOT": "." }
+    },
+    "doubletime-docs": {
+      "command": "python3",
+      "args": ["mcp-docs-server/server.py"],
+      "env": { "DOCS_ROOT": "./Docs" }
+    }
+  }
+}

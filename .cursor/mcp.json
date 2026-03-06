@@ -3,9 +3,15 @@
     "doubletime-docs": {
       "command": "python3",
       "args": ["mcp-docs-server/server.py"],
-      "cwd": "/Users/nickwu/Downloads/ProgrammingProjects/CS290/DoubleTime",
       "env": {
         "DOCS_ROOT": "./Docs"
+      }
+    },
+    "doubletime-style": {
+      "command": "python3",
+      "args": ["mcp-style-server/server.py"],
+      "env": {
+        "PROJECT_ROOT": "."
       }
     }
   }
